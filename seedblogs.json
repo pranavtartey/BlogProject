@@ -1,0 +1,30 @@
+[
+    {
+        "Author" : "Pranav",
+        "Blog" : "This is my testing blog and this will be deleted later"
+    },
+    {
+        "Author" : "Azim Riyaz",
+        "Blog" : "This is a non testing blog"
+    },
+    {
+        "Author" : "Pranjal",
+        "Blog" : "This is a blog to add volume to the database"
+    },
+    {
+        "Author" : "Fariyad Khan",
+        "Blog" : "This blog is also for adding volume to the database so that full crud app can be implemented"
+    },
+    {
+        "Author" : "Moolchand Singh",
+        "Blog" : "Yeh bhi koi naam hota hai bhala"
+    },
+    {
+        "Author" : "Foolan Devi",
+        "Blog" : "Kya baat hai iss blog app ke seeding me sab ko jagah mil rahi hai toh ham kyu peeche hate"
+    },
+    {
+        "Author" : "Victor Bajaj",
+        "Blog" : "This blog is going to add so much weight to this seeding process as this is going to be the last blog of this app seeding process"
+    }
+]
