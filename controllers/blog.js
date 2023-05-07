@@ -5,8 +5,13 @@ module.exports.getBlogs = async(req,res) => {
     res.status(200).json(allBlogs);
 }
 
+module.exports.renderNewForm = ()=> {
+    res.status(404).send("This is your new form");
+}
+
 module.exports.createBlog = async(req, res) => {
     const blog = new Blog(req.body);
+    blog.Author = req.user._id;
     await blog.save().then(() => {
         console.log("Blog saved successfully")
     })
@@ -15,7 +20,7 @@ module.exports.createBlog = async(req, res) => {
 
 module.exports.viewBlog = async(req,res) => {
     const { id } = req.params;
-    const blog = await Blog.findById(id);
+    const blog = await Blog.findById(id).populate("Comments");
     res.status(200).json(blog);
 }
 

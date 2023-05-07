@@ -16,7 +16,7 @@ const start = async() => {
     console.log("DataBase connected");
     })
         await Blog.deleteMany();
-        await Blog.create(seedData);
+        // await Blog.create(seedData);
         console.log("success");
     }catch(error) {
         console.log(error);

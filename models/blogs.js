@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 
 const BlogSchema = new mongoose.Schema({
     Author: {
-        type : String,
-        required : true,
+        type : mongoose.Schema.Types.ObjectId,
+        ref : "User"
     },
     CreatedAt : {
         type : Date,
@@ -12,7 +12,13 @@ const BlogSchema = new mongoose.Schema({
     Blog : {
         type : String,
         required : true
+    },
+    Comments : [
+        {
+        type : mongoose.Schema.Types.ObjectId,
+        ref : "Comment"
     }
+]
 })
 
 module.exports = mongoose.model("Blog",BlogSchema);
