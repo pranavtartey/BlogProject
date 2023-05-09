@@ -12,7 +12,8 @@ module.exports.registerUser = async (req, res, next) => {
         
         //passport.authenticate also calls the req.login() function and req.login() is basically used to login the newly registered user.
         console.log(req.user);
-        res.status(200).json(registeredUser);
+//         res.status(200).json(registeredUser);
+//based on your use you can eliminate any one of the responce line        
     }catch(err) {
         console.log("error", err.message);
         res.redirect("/blogs");
@@ -33,5 +34,6 @@ module.exports.logout = (req,res) => {
         if(err) {return next(err)}
         res.status(200).send("You have been logged out successfully");
     });
-    res.status(200).send("user has been loged out successfully");
+   // res.status(200).send("user has been loged out successfully");
+  //  onces res is send to the client we cant send responce again
 }
